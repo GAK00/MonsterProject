@@ -19,6 +19,10 @@ public class MonsterController {
 	 */
 	public void start(){
 		System.out.println(monster);
+		System.out.println("my Monster has this many eyes: " + monster.getEyeCount());
+		if(monster.getEyeCount()==0){
+			System.out.println("he is blind");
+		}
 		
 	}
 
