@@ -68,6 +68,25 @@ public class MonsterController {
 		else{loopbreak = true;}
 		}while(loopbreak == false);
 		System.out.println(monster);
+		System.out.println("do you want to make a new monster");
+		if(input.next().equalsIgnoreCase("yes")){
+			input.nextLine();
+			System.out.println("what is its name");
+			String newMonsterName = input.nextLine();
+			System.out.println("how many atennas");
+			double newMonsterAntenna = input.nextDouble();
+			System.out.println("how many eyes");
+			int newMonsterEyes = input.nextInt();
+			System.out.println("Does it have a belly button true or false");
+			boolean newMonsterBellyButton = input.nextBoolean();
+			System.out.println("how many noses");
+			int noses = input.nextInt();
+			System.out.println("how many arms");
+			int arms = input.nextInt();
+			MarshmallowMonster newMonster = new MarshmallowMonster(newMonsterName,newMonsterAntenna,newMonsterEyes,newMonsterBellyButton,noses,arms);
+			System.out.println(newMonster);
+			
+		}
 	}
 
 }
