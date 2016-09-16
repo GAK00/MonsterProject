@@ -2,7 +2,7 @@ package monster.controller;
 
 import monster.model.MarshmallowMonster;
 import java.util.Scanner;
-
+import java.util.Random;
 public class MonsterController {
 	private MarshmallowMonster monster;
 	private Scanner input;
@@ -85,8 +85,35 @@ public class MonsterController {
 			int arms = input.nextInt();
 			MarshmallowMonster newMonster = new MarshmallowMonster(newMonsterName,newMonsterAntenna,newMonsterEyes,newMonsterBellyButton,noses,arms);
 			System.out.println(newMonster);
+			System.out.println("do you wish to battle the monsters");
+			if(input.next().equalsIgnoreCase("yes")){
+				input.nextLine();
+				battle(monster,newMonster);}
 			
 		}
+		
 	}
+public void battle(MarshmallowMonster m1,MarshmallowMonster m2){
+	Random rand = new Random();
+	MarshmallowMonster loser;
+	MarshmallowMonster winner;
+	if(rand.nextInt(2)==1){
+		if(m1.getArmCount()>=m2.getArmCount()){
+			loser = m2;
+			 winner = m1;
+		}
+		else{
+		 loser = m1;
+	 winner = m2;}
+	}
+	else{if(m1.getArmCount()<=m2.getArmCount()){
+		loser = m2;
+		winner = m1;
+	}
+	else{
+	 loser = m1;
+	 winner = m2;}}
+	System.out.println(loser.getName()+" Died "+winner.getName()+" won");
+}
 
 }
