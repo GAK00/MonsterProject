@@ -31,6 +31,8 @@ public class MarshmallowMonster
 		 * name = Zambumafu The destroyer4 antenna 2 .5 and 2 .252 eyes
 		 * hasBellyButton = false;nose count 1armcount = 2
 		 */
+		
+		
 	}
 
 	public String getName()
@@ -78,9 +80,9 @@ public class MarshmallowMonster
 		this.eyeCount = eyeCount;
 	}
 
-	public boolean setHasBellyButton()
+	public void setHasBellyButton(boolean hasBellyButton)
 	{
-		return hasBellyButton;
+		this.hasBellyButton = hasBellyButton;
 	}
 
 	public void setNoseCount(int noseCount)
